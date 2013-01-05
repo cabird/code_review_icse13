@@ -1,6 +1,7 @@
 \documentclass[conference]{IEEEtran}
 
-\usepackage{graphicx,color}
+\usepackage{graphicx}\graphicspath{{figs/}}
+\usepackage{color}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -111,7 +112,7 @@ of Modern Code Review}
 
 Code review is a common software engineering practice employed both in open
 source and industrial contexts.  Review today is less formal and more
-"lightweight" than the code inspections performed and studied in the 70s and
+``lightweight'' than the code inspections performed and studied in the 70s and
 80s. We empirically explore the motivations, challenges, and outcomes of
 tool-based code reviews. We observed, interviewed, and surveyed developers and
 managers and manually classified hundreds of review comments across diverse
@@ -136,7 +137,7 @@ improving the quality of software projects (Ackerman, Fowler and Ebenau 1984)
 (Ackerman, Buchwald and Lewski 1989). In 1976, Fagan formalized a highly
 structured process for code reviewing (Fagan 1976), based on line-by-line group
 reviews, done in extended meetings -- code inspections. Over the years,
-researchers provided evidence on code inspectionís benefits, especially in
+researchers provided evidence on code inspection√≠s benefits, especially in
 terms of defect finding, but the cumbersome, time-consuming, and synchronous
 nature of this approach hinders its universal adoption in practice (Shull
 2008).
@@ -160,7 +161,7 @@ Answers to these questions can provide insight for both practitioners and
 researchers.  Developers and other software project stakeholders can use
 empirical evidence about expectations and outcomes to make informed decisions
 about when to use code review and how it should fit into their development
-process. Researchers can focus their attention on practitionersí challenges to
+process. Researchers can focus their attention on practitioners√≠ challenges to
 make code review more effective.
 
 We present an in-depth study of practices in teams that use modern code review,
@@ -229,7 +230,7 @@ that 20\% of the interval in a ``traditional inspection'' is wasted due to
 scheduling (Votta 1993). The ICICLE tool (Brothers, Sembugamoorthy and Muller
 1990), or ``Intelligent Code Inspection in a C Language Environment,'' was
 developed after researchers at Bellcore observed how much time and work was
-expended before and during formal code inspections. Many of todayís review
+expended before and during formal code inspections. Many of today√≠s review
 tools are based on ideas that originated in ICICLE.  Other similar tools have
 been developed in an effort to reduce time for inspection and allow
 asynchronous work on reviews.   Examples include CAIS  (Mashayekhi, Feulner and
@@ -287,7 +288,7 @@ far), we focused on developers using this tool for code review -- CodeFlow.
 CodeFlow is a collaborative code review tool that allows users to directly
 annotate source code in its viewer and interact with review participants in a
 live chat model. The functionality of CodeFlow is similar to other review tools
-such Googleís Mondrian (Kennedy 2006), Facebookís Phabricator (Tsotsis 2011) or
+such Google√≠s Mondrian (Kennedy 2006), Facebook√≠s Phabricator (Tsotsis 2011) or
 open-source  Gerrit (Gerrit (software) 2012). Developers who want their code to
 be reviewed create a package with the changed (new, deleted, and modified)
 files, select the reviewers, write a message to describe the code review, and
@@ -301,7 +302,7 @@ contains a textual explanation of the change, written by the author. On bottom
 left, CodeFlow shows the list of reviewers and their status (2). We see that
 Christian is the review author and Alberto, Tom, and Nachi are the reviewers.
 Alberto has reviewed and is waiting for the author to act, as the clock icon
-suggests, while Nachi already signed off on the changes. CodeFlowís main view
+suggests, while Nachi already signed off on the changes. CodeFlow√≠s main view
 (3) shows the diff-highlighted content of the file currently under review. Both
 the reviewers and the author can highlight portions of the code and add
 comments inline (4). These comments can start threads of discussion and are the
@@ -433,7 +434,7 @@ concepts that emerged from the previous phases. Towards this goal, we created
 two surveys to reach a significant number of participants and to challenge our
 conclusions (The full surveys are available as a technical report (Bacchelli
 and Bird 2012)). For the design of the surveys, we followed Kitchenham and
-Pfleegerís guidelines for personal opinion surveys (Kitchenham and Pfleeger
+Pfleeger√≠s guidelines for personal opinion surveys (Kitchenham and Pfleeger
 2007). Both surveys were anonymous to increase response rates (Tyagi 1989).
 
 We sent the first survey to a cross section of managers.  We considered
@@ -455,7 +456,7 @@ The second survey comprised 18 questions, mostly closed with multiple choice
 answers, and was sent to 2,000 randomly chosen developers who signed off on
 average at least one code review per week since the beginning of the year. We
 used the time frame of January to June of 2012 to minimize the amount of
-organizational churn during the time period and identify employeesí activity in
+organizational churn during the time period and identify employees√≠ activity in
 their current role and team.  We received 873 answers (44\% response rate). Both
 response rates were  high, as other online surveys in software engineering have
 reported response rates ranging from 14\% to 20\% (Punter, et al. 2003).
@@ -473,7 +474,7 @@ prominent, is just one of the many motivations driving developers to perform
 code reviews. Especially when reinforced by a strong team culture around
 reviews, developers see code reviews as an activity that has multiple
 beneficial influences not only on the code, but also for the team and the
-entire development process. In this vein, one senior developerís comment
+entire development process. In this vein, one senior developer√≠s comment
 summarized many of the responses: \quotation{[code review] also has several
 beneficial influences: (1) makes people less protective about their code, (2)
 gives another person insight into the code, so there is (3) better sharing of
@@ -485,7 +486,7 @@ several references to motivations for code review and identified six main
 topics. To complete this list, in the survey for managers, we included an open
 question on why they perform code reviews in their team. We analyzed the
 responses to create a comprehensive list of high-level motivations. We included
-this list in the developersí survey and asked them to rank the top three main
+this list in the developers√≠ survey and asked them to rank the top three main
 reasons that described why they do code reviews.
 
 In the rest of this section, we discuss the motivations that emerged as the
@@ -544,7 +545,7 @@ code reviews and ``code improvement'' comments. Such comments seem easier to
 write and sometimes interviewees mentioned them as the way reviewers use to
 avoid spending time to conduct good code reviews. An observation by a senior
 developer, in the company for more than nine years, summarizes the opinions we
-received from many interviewees: \quotation{Iíve seen quite a few code reviews
+received from many interviewees: \quotation{I√≠ve seen quite a few code reviews
 where someone commented on formatting while missing the fact that there were
 security issues or data model issues.}
 
@@ -655,7 +656,7 @@ about their code.} Similarly a manager wrote us explaining that she deems code
 reviews important because they \quotation{Dilute any ``rigid sense of
 ownership'' that might develop over chunks of code.}
 
-In the programmersí survey, 51 respondents (6\%) marked ``share code
+In the programmers√≠ survey, 51 respondents (6\%) marked ``share code
 ownership'' as their first motivation, 100 (11\%) as their second, and (10\%)
 as their third.
 
@@ -663,7 +664,7 @@ as their third.
 
 In this section, we analyzed the motivations that developers and managers have
 for doing code review. We abstracted them into a list, which we finally
-included in the programmersí survey. Figure 3 reports the answers given to this
+included in the programmers√≠ survey. Figure 3 reports the answers given to this
 question: The black bar is the number of developers that put that row as their
 top motivation, the gray bar is the number that put it as the second
 motivation, etc. We have ordered the factors by giving 3 points for a first
