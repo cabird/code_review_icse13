@@ -48,18 +48,18 @@ testing.} Moreover, the tool seems not to have an impact on this main
 motivation: \quotation{using CodeFlow or using any other tool makes a little
 difference to us; it's more about being able to identify flaws in the logic.}
 
-Almost all the managers included ``finding defects'' as one of the reasons for
+Almost all the managers included \emph{finding defects} as one of the reasons for
 doing code reviews; for 44\% of the managers, it is the top reason. Managers
 considered defects to be both low level issues (\eg \quotation{correct logic
 is in place}) and high level concerns (\eg \quotation{catch errors in
-design}). Concerning surveyed developers/testers, ``finding defects'' is the
+design}). Concerning surveyed developers/testers, \emph{finding defects} is the
 first motivation for code review for 383 of the programmers (44\%), second
 motivation for 204 (23\%), and third for 96 (11\%).
 
 This is in-line with the reason why code inspections were devised in the first
 place: reducing software defects~\cite{ackerman1984software}.
 
-Nevertheless, even though ``finding defects'' emerged from our data as a strong
+Nevertheless, even though \emph{finding defects} emerged from our data as a strong
 motivation (the first for almost half of the programmers and managers),
 interviews and survey results indicate that this only tells part of the story
 of why practitioners do code reviews and the outcomes they expect.
@@ -70,11 +70,10 @@ Code improvements are comments or changes about code in terms of readability,
 commenting, consistency, dead code removal, \etc, but do not involve
 correctness or defects.
 
-Programmers ranked ``code improvement'' as an important motivation for code
-review, close to ``finding defects:'' This is the primary motivation for 337
-programmers (39\%), the second for 208 (24\%), and the third for 135 (15\%).
-Managers reported code improvements as their primary motivation in 51 cases
-(31\%). One manager wrote how code review in her view is a
+Programmers ranked \emph{code improvement} as an important motivation for code
+review, close to \emph{finding defects}: This is the primary motivation for 337~(39\%)
+programmers, the second for 208~(24\%), and the third for 135~(15\%).
+Managers reported \emph{code improvement} as their primary motivation in 51~(31\%) cases. One manager wrote how code review in her view is a
 \quotation{discipline of explaining your code to your peers {\normalfont[that]} drives a
 higher standard of coding. I think the process is even more important than the
 result.}
@@ -82,12 +81,12 @@ result.}
 Most interviewed programmers mentioned that at least one of the reviewers
 involved in each code review takes care of checking whether the code follows
 the team conventions, for example in terms of code formatting and in terms of
-function and variable naming. Some programmers use the ``code improvement''
+function and variable naming. Some programmers use a ``code improvement''
 check as a first step when doing code review: \quotation{the first basic pass
 on the code is to check whether it is standard across the team.}
 
 The interviews also gave us a glimpse of the connection between the quality of
-code reviews and ``code improvement'' comments. Such comments seem easier to
+code reviews and code improvement comments. Such comments seem easier to
 write and sometimes interviewees mentioned them as the way reviewers use to
 avoid spending time to conduct good code reviews. An observation by a senior
 developer, in the company for more than nine years, summarizes the opinions we
@@ -97,7 +96,7 @@ security issues or data model issues.}
 
 \subsection{Alternative Solutions}
 
-``Alternative solutions'' regard changes and comments on improving the
+\emph{Alternative solutions} regard changes and comments on improving the
 submitted code by adopting an idea that leads to a better implementation. This
 is one of the few motivations in which developers and managers do not agree.
 While 147~(17\%) developers put this as the first motivation, 202~(23\%) as the
@@ -111,13 +110,12 @@ mostly in terms of generic \quotation{better ways to do things.}
 
 \subsection{Knowledge Transfer}
 
-All the interviewees but one motivated their code reviews also from a learning,
-or ``knowledge transfer,'' perspective. With the words of a senior developer:
+All the interviewees but one motivated their code reviews also from a learning---or \emph{knowledge transfer}---perspective. With the words of a senior developer:
 \quotation{one of the things that should be happening with code reviews over
 time is a distribution of knowledge. If you do a code review and did not learn
 anything about the area and you still do not know anything about the area, then
 that was not as good code review as it could have been.} Although we did not
-include questions related to ``knowledge transfer'' in our interview guideline,
+include questions related to \emph{knowledge transfer} in our interview guideline,
 this topic kept emerging spontaneously from each meeting, thus underscoring its
 value for practitioners.
 
@@ -132,14 +130,14 @@ transfer about APIs usage, system design, best practices, team conventions,
 \quotation{additional code tricks,} \etc Moreover code reviews are recognized
 for educating new developers about code writing.
 
-Managers included ``knowledge transfer'' as one of the reasons for code review,
+Managers included \emph{knowledge transfer} as one of the reasons for code review,
 although never as the top motivation. They mostly wrote about code review as an
 education means by mentioning among the motivations:
 \quotation{developer education,} \quotation{education for junior developers who
 are learning the codebase,} and \quotation{learning tool to teach more junior
 team members.}
 
-Programmers answering the survey declared ``knowledge transfer'' to be their
+Programmers answering the survey declared \emph{knowledge transfer} to be their
 first motivation for code review in 73~(8\%) cases, their second in 119~(14\%),
 and their third in 141~(16\%).
 
@@ -164,8 +162,8 @@ must the team be kept aware of the directions taken by the code, but also
 nobody should be allowed to ``secretly'' make changes that might break the code
 or alter functionalities.
 
-The 873 programmers answering the survey ranked ``team awareness and
-transparency'' very close to ``knowledge transfer.'' In fact, the two concepts
+The 873 programmers answering the survey ranked \emph{team awareness and
+transparency} very close to \emph{knowledge transfer}. In fact, the two concepts
 appeared logically related also in the interviews; for example one tester,
 while reviewing some code said: \quotation{oh, this guy just implemented this
 feature, and now let me back and use it somewhere else.} Showing that he both
@@ -174,14 +172,14 @@ in his own code. 75~(9\%) developers considered team awareness their first
 motivation for code review, 108~(12\%) their second, and 149~(17\%) their
 third. 
 
-Although team awareness and transparency emerged from our data as clearly
+Although \emph{team awareness and transparency} emerged from our data as clearly
 promoted by the code review process, academic research seems to have given
 little attention to it. 
 
 \subsection{Share Code Ownership}
 
-The concept of ``shared code ownership'' is closely related to ``team awareness
-and transparency,'' but it has a stronger connotation toward active
+The concept of \emph{shared code ownership} is closely related to \emph{team awareness
+and transparency}, but it has a stronger connotation toward active
 collaboration and overlapping coding activities. Programmers and managers
 believe that code review is not only an occasion to notify other team members
 about incoming changes, but also a means to have more than one knowledgeable
@@ -202,8 +200,8 @@ about their code.} Similarly a manager wrote us explaining that she deems code
 reviews important because they \quotation{Dilute any ``rigid sense of
 ownership'' that might develop over chunks of code.}
 
-In the programmers' survey, 51~(6\%) respondents marked ``share code
-ownership'' as their first motivation, 100~(11\%) as their second, and 91~(10\%)
+In the programmers' survey, 51~(6\%) respondents marked \emph{share code
+ownership} as their first motivation, 100~(11\%) as their second, and 91~(10\%)
 as their third.
 
 \subsection{Summary}
@@ -217,12 +215,12 @@ motivation, \etc We have ordered the factors by giving 3 points for a first
 motivation response, 2 points for a second motivation, \etc and then sorting by
 the sum. 
 
-We discussed the five most prominent motivations, which show that ``finding
-defects'' is the top motivation, although participants believe that code review
+We discussed the five most prominent motivations, which show that \emph{finding
+defects} is the top motivation, although participants believe that code review
 brings other benefits. The first two motivations were already popular in
 research and their effectiveness have been evaluated in the context of code
 inspections; on the contrary, the other motivations are still unexplored,
-especially those regarding more ``social'' benefits on the team, such as shared
+especially those regarding more social benefits on the team, such as shared
 code ownership.
 
 Although motivations are well defined, we still have to verify whether they
