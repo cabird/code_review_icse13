@@ -1,30 +1,29 @@
-%!TEX root = paper.tex
+%!TEX root = ../paper.tex
 
 %%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction} \label{sec:introduction}
 %%%%%%%%%%%%%%%%%%%%%%
 
+%   \vspace{-0.5em}
 
 Peer code review, a manual inspection of source code by developers other than
 the author, is recognized as a valuable tool for reducing software defects and
-improving the quality of software projects (Ackerman, Fowler and Ebenau 1984)
-(Ackerman, Buchwald and Lewski 1989). In 1976, Fagan formalized a highly
-structured process for code reviewing (Fagan 1976), based on line-by-line group
-reviews, done in extended meetings -- code inspections. Over the years,
-researchers provided evidence on code inspectionís benefits, especially in
+improving the quality of software projects~\cite{ackerman1984software, ackerman1989software}.
+In 1976, Fagan formalized a highly
+structured process for code reviewing~\cite{fagan1976design}, based on line-by-line group
+reviews, done in extended meetings---\emph{code inspections}. Over the years,
+researchers provided evidence on code inspection's benefits, especially in
 terms of defect finding, but the cumbersome, time-consuming, and synchronous
-nature of this approach hinders its universal adoption in practice (Shull
-2008).
+nature of this approach hinders its universal adoption in practice~\cite{shull2008inspecting}. %(Shull 2008).
 
 Nowadays, many organizations are adopting more lightweight code review
 practices to limit the inefficiencies of inspections. In particular, there is a
-clear trend toward the usage of tools specifically developed to support code
-review (Rigby, Cleary, et al. 2012). In the context of this paper, we define
-Modern Code Review, as review that is (1) informal (in contrast to
+clear trend toward the usage of tools developed to support code
+review~\cite{rigby2012open}. In the context of this paper, we define
+\emph{Modern Code Review}, as review that is (1) informal (in contrast to
 Fagan-style), (2) tool-based, and that (3) occurs regularly in practice
-nowadays, for example at companies such as Microsoft, Google (Kennedy 2006),
-Facebook (Tsotsis 2011), and in other companies and OSS projects (Gerrit
-(software) 2012).
+nowadays, for example at companies such as Microsoft, Google~\cite{kennedy2006online},
+Facebook~\cite{tsotsis2011online}, and in other companies and OSS projects~\cite{gerrit2012online}.
 
 This trend raises questions, such as: Can we apply the lessons learned from
 previous research on code inspections to modern code reviews? What are the
@@ -35,7 +34,7 @@ Answers to these questions can provide insight for both practitioners and
 researchers.  Developers and other software project stakeholders can use
 empirical evidence about expectations and outcomes to make informed decisions
 about when to use code review and how it should fit into their development
-process. Researchers can focus their attention on practitionersí challenges to
+process. Researchers can focus their attention on practitioners' challenges to
 make code review more effective.
 
 We present an in-depth study of practices in teams that use modern code review,
@@ -43,12 +42,12 @@ revealing what practitioners think, do, and achieve when it comes to modern
 code review.
 
 Since Microsoft is made up of many different teams working on very diverse
-products, it gives the opportunity to study teams performing code review in
-situ and understand their expectations, the benefits they derive from code
+products, it gives the opportunity to study teams performing code review \emph{in
+situ} and understand their expectations, the benefits they derive from code
 review, the needs they have, and the problems they face.
 
-We set up our study as an explorative investigation. We started without a
-priori hypotheses regarding how and why code review should be performed, with
+We set up our study as an explorative investigation. We started without \emph{a
+priori} hypotheses regarding how and why code review should be performed, with
 the aim of discovering what developers and managers expect from code review,
 how reviews are conducted in practice, and what the actual outcomes and
 challenges are. To that end, we (1) observed 17 industrial developers
