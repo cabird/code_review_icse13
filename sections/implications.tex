@@ -5,3 +5,25 @@
 %%%%%%%%%%%%%%%%%%%%%%
 
 
+\subsection{Recommendations for Practitioners}
+
+From our work we derive recommendations to developers:
+
+\textbf{Quality Assurance:} There is a mismatch between the expectations and the actual outcomes of code reviews. From our study, review does not result in identifying defects as often as project members would like and even more rarely detects deep, subtle, or ``macro'' level issues. Relying on code review in this way for quality assurance may be fraught.
+
+\textbf{Understanding:} When reviewers have \emph{a priori} knowledge of the context and the code, they complete reviews more quickly and provide more valuable feedback to the author. Teams should aim to increase the breadth of understanding of developers (if the author of a change is the only expert, she has no potential reviewers) and change authors should include code owners and others with understanding as much as possible when using review to identify defects. Developers indicated that when the author provided context and direction to them in a review, they could respond better and faster.
+
+\textbf{Beyond Defects:} Modern code reviews provide benefits beyond finding defects. Code review can be used to improve code style, find alternative solutions, increase learning, share code ownership, \etc This should guide code review policies.
+\textbf{Communication:} Despite the growth of tools for supporting code reviews, developers still have need of richer communication than comments annotating the changed code when reviewing. Teams should provide mechanisms for in-person or, at least, synchronous communication.
+
+
+\subsection{Implications for Researchers}
+
+Our work uncovered aspects of code review---beyond our research questions---that deserve further study:
+
+\textbf{Automate Code Review Tasks:} We observed that many code review comments were related to ``code improvement'' concerns and low-level ``micro'' defects. Identifying both of these are problems that research has begun to solve. Tools for enforcing team code conventions, checking for typos, and identifying dead code already exist. Even more advanced tasks such as checking boundary conditions or catching common mistakes have been shown to work in practice on real code. For example Google experimented with adding FindBugs to their review process, though little is reported about the results~\cite{ayewah2007using}. Automating these tasks frees reviewers to look for deeper, more subtle defects. Code review is fertile ground to have an impact with code analysis tools.
+
+\textbf{Program Comprehension in Practice:} We identified context and change understanding as challenges that developers face when reviewing, with a direct relationship to the quality of review comments. Interestingly, modern IDEs ship with many tools to aid context and understanding, and there is an entire conference (ICPC) devoted to code comprehension, yet all current code review tools we know of show a highlighted diff of the changed files to a reviewer with no additional tool support. The most common motivation that we have seen for code comprehension research is a developer that is working on new code, but we argue that reviewers reviewing code they have not seen before may be more common than a developer working on new code. This is a ripe opportunity for code understanding researchers to have impact on real world scenarios.
+
+\textbf{Socio-technical Effects:} Awareness and learning were cited as motivations for code review, but these outcomes are difficult to observe from traces in reviews. We did not investigate these further, but studies can be designed and carried out to determine if and how awareness and learning increase as a result of being involved in code review.
+
