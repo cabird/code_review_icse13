@@ -16,14 +16,15 @@ researchers provided evidence on code inspection's benefits, especially in
 terms of defect finding, but the cumbersome, time-consuming, and synchronous
 nature of this approach hinders its universal adoption in practice~\cite{shull2008inspecting}. %(Shull 2008).
 
-Nowadays, many organizations are adopting more lightweight code review
+Nowadays many organizations are adopting more lightweight code review
 practices to limit the inefficiencies of inspections. In particular, there is a
 clear trend toward the usage of tools developed to support code
 review~\cite{rigby2012open}. In the context of this paper, we define
-\emph{Modern Code Review}, as review that is (1) informal (in contrast to
-Fagan-style), (2) tool-based, and that (3) occurs regularly in practice
-nowadays, for example at companies such as Microsoft, Google~\cite{kennedy2006online},
-Facebook~\cite{tsotsis2011online}, and in other companies and OSS projects~\cite{gerrit2012online}.
+\emph{Modern Code Review}, as review that is \begin{inparaenum}[(1)]
+\item informal (in contrast to Fagan-style), 
+\item tool-based, and that 
+\item occurs regularly in practice nowadays, for example at companies such as Microsoft, Google~\cite{kennedy2006online},
+Facebook~\cite{tsotsis2011online}, and in other companies and OSS projects~\cite{gerrit2012online}. \end{inparaenum}
 
 This trend raises questions, such as: Can we apply the lessons learned from
 previous research on code inspections to modern code reviews? What are the
@@ -46,16 +47,16 @@ products, it gives the opportunity to study teams performing code review \emph{i
 situ} and understand their expectations, the benefits they derive from code
 review, the needs they have, and the problems they face.
 
-We set up our study as an explorative investigation. We started without \emph{a
+We set up our study as an exploratory investigation. We started without \emph{a
 priori} hypotheses regarding how and why code review should be performed, with
 the aim of discovering what developers and managers expect from code review,
 how reviews are conducted in practice, and what the actual outcomes and
-challenges are. To that end, we (1) observed 17 industrial developers
-performing code review with various degrees of experience and seniority across
-16 separate product teams with distinct reviewing cultures and policies; (2)
-interviewed these developers using a semi-structured interviews; (3) manually
-inspected and classified the content of 570 comments in discussions contained
-within code reviews; and (4) surveyed 165 managers and 873 programmers.
+challenges are. To that end, we \begin{inparaenum}[(1)] 
+\item observed 17 industrial developers performing code review with various degrees of experience and seniority across 16 separate product teams with distinct reviewing cultures and policies; 
+\item interviewed these developers using a semi-structured interviews; 
+\item manually inspected and classified the content of 570 comments in discussions contained within code reviews; and 
+\item surveyed 165 managers and 873 programmers.
+\end{inparaenum}
 
 Our results show that, although the top motivation driving code reviews is
 still finding defects, the practice and the actual outcomes are less about

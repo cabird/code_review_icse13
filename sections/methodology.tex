@@ -44,7 +44,7 @@ about the incoming task via email.
 
 
 Once reviewers open a CodeFlow review, they interact with it via a single
-desktop window (Figure~\ref{fig:codeflow:screenshot}). On the top left (\textbf{1}), they see the list of files
+desktop window (\figref{fig:codeflow:screenshot}). On the top left (\textbf{1}), they see the list of files
 changed in the current submission, plus a ``description.txt'' file, which
 contains a textual explanation of the change, written by the author. On bottom
 left, CodeFlow shows the list of reviewers and their status (\textbf{2}). We see that
@@ -70,8 +70,8 @@ real code review comments without incurring the Hawthorne effect~\cite{adair1984
 
 \begin{figure}[t] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[width=0.98\columnwidth]{figs/codeflow.pdf}
-   \caption{Screenshot of CodeFlow, the dominant code review tool used by developers at Microsoft.}
+   \includegraphics[width=0.98\columnwidth]{codeflow.pdf}
+   \caption{CodeFlow, the main code review tool used by developers at Microsoft.}
    \label{fig:codeflow:screenshot}
       \vspace{-1.5em}
 \end{figure}
@@ -82,14 +82,14 @@ real code review comments without incurring the Hawthorne effect~\cite{adair1984
 
 \begin{figure*}[t] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[width=1.3\columnwidth]{figs/methodology.pdf}
+   \includegraphics[width=1.4\columnwidth]{methodology.pdf}
    \caption{The mixed approach research method applied.}
    \label{fig:research-method}
    \vspace{-1.5em}
 \end{figure*}
 
 Our research method followed a mixed approach~\cite{creswell2009research}, depicted in
-Figure~\ref{fig:research-method}, collecting data from different sources for triangulation: (\textbf{1})
+\figref{fig:research-method}, collecting data from different sources for triangulation: (\textbf{1})
 analysis of previous study, (\textbf{2}) observations and interviews with developers,
 (\textbf{3}) card sort on interview data,  (\textbf{4}) card sort on code review comments, (\textbf{5})
 the creation of an affinity diagram, and (\textbf{6}) survey to managers and
@@ -119,7 +119,7 @@ interviews.
 one-to-one meetings with developers who use CodeFlow, each taking 40-60
 minutes. 
 
-We contacted 100 random candidates who signed-off between 50 and 250 code
+We contacted 100 randomly selected candidates who signed-off between 50 and 250 code
 reviews since the CodeFlow release and sampled across different product teams
 to address our research questions from a \emph{multi-point} perspective. We wrote
 developers who used CodeFlow in the past and asked them to contact us, giving
@@ -158,10 +158,13 @@ sorting technique that is widely used in information architecture to create
 mental models and derive taxonomies from input data~\cite{barker2005online}. In our case
 it helped to organize the codes into hierarchies to deduce a higher level of
 abstraction and identify common themes. A card sort involves three phases: In
-the (1) \emph{preparation phase}, participants of the card sort are selected and the
-cards are created; in the (2) \emph{execution phase}, cards are sorted into meaningful
-groups with a descriptive title; and in the (3) \emph{analysis phase}, abstract
-hierarchies are formed to deduce general categories.
+the \begin{inparaenum}[(1)]
+\item \emph{preparation phase}, participants of the card sort are selected and the
+cards are created; in the 
+\item \emph{execution phase}, cards are sorted into meaningful
+groups with a descriptive title; and in the 
+\item \emph{analysis phase}, abstract hierarchies are formed to deduce general categories.
+\end{inparaenum}
 
 We applied an \emph{open card sort}: There were no predefined groups. Instead, the
 groups emerged and evolved during the sorting process. In contrast, a closed
@@ -181,7 +184,7 @@ categories.
 
 \textbf{4. Card sort (code review comments):} The same method was applied to group code
 review comments into categories: We randomly sampled 200 threads with at least
-two comments (e.g., Point 4 of Figure~\ref{fig:research-method}), from the entire dataset of CodeFlow
+two comments (e.g., Point 4 of \figref{fig:research-method}), from the entire dataset of CodeFlow
 reviews, which embeds data from dozens of independent software products at
 Microsoft. We printed one card for each comment (along with the entire
 discussion thread to give the context), totaling 570 cards, and conducted a
@@ -192,11 +195,13 @@ that emerged from the card sort. This tool allows large numbers of ideas to be
 sorted into groups for review and analysis~\cite{shade2000improving}. We used it
 to generate an overview of the topics that emerged from the card sort, in order
 to connect the related concepts and derive the main themes. For generating the
-affinity diagram, we followed the five canonical steps: we (1) recorded the
-categories on post-it-notes, (2) spread them onto a wall, (3) sorted the
-categories based on discussions, until all are sorted and all participants
-agreed, (4) named each group with a description, and (5) captured and discussed
-the themes. 
+affinity diagram, we followed the five canonical steps: we \begin{inparaenum}[(1)] 
+\item recorded the categories on post-it-notes, 
+\item spread them onto a wall, 
+\item sorted the categories based on discussions, until all are sorted and all participants agreed, 
+\item named each group with a description, and 
+\item captured and discussed the themes.
+\end{inparaenum}
 
 
 \textbf{6. Surveys:} The final step of our study was aimed at validating the
@@ -214,7 +219,7 @@ dimension was whether or not the manager had participated in a code review
 himself since the beginning of the year and the second dimension was whether
 the manager managed a single team or multiple teams (a manager of managers).
 Thus, we had one sample of first level managers who participated in review,
-another sample of second level managers who participated in reviews, \etc.  The
+another sample of second level managers who participated in reviews, \etc  The
 first survey was a short survey comprising 6 questions (all optional), which we
 sent to 600 managers that had at least ten direct or indirect reporting
 developers who used CodeFlow in the past. The central focus was the open
