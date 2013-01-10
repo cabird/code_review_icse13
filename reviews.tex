@@ -1,0 +1,297 @@
+\documentclass[a4paper,10pt]{scrartcl}
+
+\usepackage{times,graphicx,alltt,enumerate,amsmath,amssymb,eurosym,hyperref,a4wide,cite,xspace,ifthen,url,hyperref,color,soul,pifont}
+
+\newcounter{revnumber}
+
+\newenvironment{review}[1]{
+	\addtocounter{revnumber}{1}
+	\subsection*{Review \arabic{revnumber} - #1
+	\makeatother}
+	}      
+
+\newenvironment{myindentpar}[1]%
+{\begin{list}{}%
+         {\setlength{\leftmargin}{#1}}%
+         \item[]%
+}
+{\end{list}}
+
+
+\newcommand\serieheader[6]{
+	{\noindent \bf \Large \sffamily {#1} {#2}}\\[2mm] {\sf #3} \hfill {\sf #5}\\[2mm] {\sf #4} \hfill {\sf #6} \noindent \rule{\linewidth}{0.3mm}
+	}
+
+\newboolean{showcomments}
+\setboolean{showcomments}{true}
+\ifthenelse{\boolean{showcomments}}
+{\newcommand{\nb}[2]{\fbox{\bfseries\sffamily\scriptsize#1}{\sf\small$\blacktriangleright$\textit{#2}$\blacktriangleleft$}}}
+{\newcommand{\nb}[2]{}}
+\newcommand{\vectornorm}[1]{\left|\left|#1\right|\right|}
+
+
+
+\newcommand\CB[1]{\nb{Chris}{#1}}
+\newcommand\cb[1]{\nb{Chris}{#1}}
+\newcommand\ab[1]{\nb{Alberto}{#1}}
+\newcommand\AB[1]{\nb{Alberto}{#1}}
+
+
+
+
+\begin{document}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{review} {}
+
+\noindent{\bf Summary}
+
+The authors presents the results of an empirical study at Microsoft that
+investigated code review practices. The authors use the term ``modern
+code review'' meaning that such reviews are performed informally, are
+supported with tools, and are performed frequently in everyday software
+engineering practice. The authors observed 17 developers in 16 product
+teams and analyzed 570 review comments to derive recommendations for
+practitioners and researchers working of review processes and tools.
+They study the motivations of developers, actual outcomes of reviews,
+and challenges experienced. The study shows that besides defect
+detection knowledge transfer, team awareness, and improved solutions are
+the key factors that motivate developers to perform code reviews.\\
+
+\noindent{\bf Evaluation}
+
+The paper addresses a (still) interesting topic. Structured inspection
+techniques proposed in the 1970s are rarely performed in software
+development in their original form today. Instead companies are nowadays
+using more lightweight techniques to perform code reviews. Analyzing
+current review practices and analyzing the benefits and actual use in
+current real-world development processes is an important and interesting
+topic of research.
+
+The paper is well written and motivated and I liked reading it. I liked
+particularly that the authors takes a very practical and realistic view
+on code reviews. The research method involving the review of a previous
+study, observations, interviews, card sorting techniques, affinity
+diagrams and survey for validation is well described and reasonable.
+
+The results rather confirm what can be expected but are not really
+surprising in my view. It is known already that code reviewing helps
+finding defects, maintaining team awareness, improving code quality, and
+transferring knowledge among team members. The recommendations and
+implications summarize the detailed results but are also rather
+high-level. While interesting I doubt that a lot can be learned.
+
+Regarding threats to validity I agree with the authors that empirical
+research done in one company can contribute to scientific development if
+it is based on careful observation. However, the study might be biased
+by the CodeFlow code review tool that was used by developers participating
+in the study. The authors briefly discuss this issue but this discussion
+should be extended in my view. Furthermore, only 17 users participated
+in the study. The authors write that they sampled across different
+product teams to address different perspectives and to cover different
+levels of experience. Still 17 participants is not a high number given that
+the CodeFlow user base is 28.000 according to the authors.
+
+The authors investigate ad-hoc review processes. However, I missed a
+discussion in the paper of how the results relate to more conventional
+techniques traditionally used in code reviews. For instance, would
+checklists or reading techniques be useful in the described development
+context?
+
+The paper lists a number of existing studies and papers on software
+inspection and code reviews but also misses important papers from the
+literature. The following references should be considered:
+
+\begin{enumerate}
+
+\item Parnas \& Weiss, D.M. Active Design Reviews: Principles and Practice. JSS
+7, 259-265 (1987)
+
+\item Perpich et al., Anywhere, Anytime Code Inspections: Using the Web to
+Remove Inspection Bottlenecks in Large-Scale Software Development. ICSE
+1997
+
+\item Biffl el al., A family of experiments to investigate the effects of
+groupware for software inspection. ASE Journal 13(3): 373-394 (2006)
+
+\item Johnson \& Tjahjono, Assessing software review meetings: A controlled
+experimental study using CSRS. ICSE 1997
+
+\item Lanubile \& Mallardo, An Empirical Study of Web-Based Inspection
+Meetings. ACM/IEEE Int. Symp. on Empirical Software Engineering, Rome,
+pp. 244-251 (2003).
+
+\end{enumerate}
+
+\end{review}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{review}{}
+
+\noindent{\bf Summary}
+
+The authors examine the expectations, outcomes and challenges of code review as
+applied at Microsoft using the CodeFlow tool by surveying and interviewing a
+large collection of developers and managers. The study had several components:
+analyzing the results of a prior study, observing developers and interviewing
+developers, performing a card sort of interview data, examining and sorting
+review comments, creating an affinity diagram, and surveying managers and
+developers. The authors examine 3 research questions and then provide guidance
+on what areas should be further researched.\\
+
+\noindent{\bf Evaluation}
+
+Positives:
+
+\begin{itemize}
+
+\item[+] The authors undertook a large study using multiple techniques and sources of
+data, analyzing it using widely applied techniques, and then looking for trends
+
+\item[+] The authors identify differences in the expectations and outcomes of managers
+and developers
+
+\item[+] The authors place their work in the context of related work
+
+\item[+] The authors identify the work that should be approached in the future
+
+\item[+] The paper is well written and the approach is explained well
+
+\item[+] The take away message is clear - though developers and managers plan to use
+code reviews to find faults, that is not really the main thing that happens.
+Reviews are mainly used for code improvement and understanding, with
+understanding being a major issue for developers (indicating a need for further
+research).
+
+\end{itemize}
+
+Opportunities for improvement:
+
+\begin{itemize}
+
+\item[p.2] Please describe the initial in-field observations
+
+\item[p.3] was there a Hawthorne effect to the ``thought aloud'' portion of the work?
+
+\item[p.4] top left column - please show a sample card?
+
+\item[p.4] top left - is there not possible bias from the first author sorting the
+cards to form initial themes?
+
+\item[p.4] middle of left column - how time consuming were the card sorts?
+
+\end{itemize}
+
+Of lesser importance:
+
+There are some typos and minor grammatical issues - a thorough proofread of the
+paper will remedy this
+
+p. 9 need text under section VII header
+
+
+\end{review}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{review}{}
+
+\noindent{\bf Summary}
+
+This paper reports the results of an empirical study of what the authors call
+``modern code inspections,'' i.e., lightweight, asynchronous inspections carried
+out by individuals with the aid of online tools. The authors used a
+multi-method approach, employing interviews, a survey, and analyzing review
+comments captured by the tool. The results describe the purposes for which
+inspections are carried out, what actually happens in the inspection process as
+revealed by the comments, and a broad sampling of managers and developers via
+the survey. Among the results are that finding defects is (unsurprisingly) the
+most frequently mentioned purpose, but unexpectedly, several other purposes are
+very nearly as common, such as code improvement, finding alternative solutions,
+and learning about the code base. In fact, inspections appear not to be
+terribly effective in finding any but the shallowest and most obvious bugs,
+unless the code inspectors are already familiar with the code they are reading.
+The authors provide recommendations for tool improvements and for future
+research that address these overlooked, and potentially more important,
+purposes.\\
+
+\noindent{\bf Evaluation}
+
+This is an excellent paper. The topic of inspections, one might think at first,
+has been the subject of so much empirical study that there is little left to
+learn. This paper shows definitively that there is much more to learn. The
+methods were very well suited to the exploratory nature of the work, and the
+use of multiple methods, each with different strengths and weaknesses, provides
+a very convincing base of evidence for the claims in the paper. For example,
+developers pursue a number of purposes in participating in inspections, as the
+interviews clearly bring out. The survey of managers provides a contrasting
+view, as they share some of these purposes (e.g., finding bugs) but not others
+(e.g., finding alternative solutions). The analysis of comments enriches the
+results further, showing what developers communicated about, and the sorts of
+issues that appeared to absorb their time and energy (e.g., code
+understanding), and those that did not (e.g., trying to find deep bugs).
+
+The paper makes great use of triangulation, i.e., seeking additional evidence
+to support or refute a tentative interpretation. One of the most interesting
+was the observation, from the interviews and comments, that usually only
+superficial bugs were found, and another observation that unfamiliar code was
+very hard to understand. In the survey of developers, they asked for each of
+the inspection outcomes (e.g., finding bugs, learning about the code, improving
+the code) how much code understanding was required (rated on a scale from
+"none" to "complete"). Interestingly, "finding defects" came out as requiring
+the greatest level of understanding, and along with "alternative solutions"
+were so far above the others, that they seem qualitatively very different.
+Other outcomes one might expect to be similar, such as "code improvement" were
+far lower. This finding not only reinforces the earlier results about finding
+only superficial bugs and understanding being the most difficult part of the
+inspection, it suggests an interesting relationship between the two.
+
+This is an important paper. It provides convincing evidence that inspections
+are important, but not for the reasons we thought. In fact, under many
+conditions, they are not terribly useful for finding bugs, but they accomplish
+many other important purposes. As the authors point out, tools and processes
+are optimized around those things that inspections are not very good at, and
+they neglect important things like providing assistance for understanding the
+code, creating a sense of shared ownership, and transferring knowledge. I think
+this paper will change how the field thinks about inspections and what we need
+to support them. In fact, it has implications beyond inspections, for example,
+the about the potential value of "transparent" environments, such as GitHub,
+where all coding is done out in the open, and for pair programming that in
+practice can be very close to lightweight inspections, and serves many of the
+same purposes.
+
+As an aside, the paper also introduces some interesting analysis techniques.
+Open sorting is an interesting variation on the standard qualitative technique
+of open coding, and the way they used the affinity diagram - as a technique to
+find order in the categories they derived from open coding - is an interesting
+way to carry out axial coding. It might be helpful to readers to connect these
+techniques with the classical qualitative methods works such as:
+
+Strauss, A., \& Corbin, J. (1990). Basics of Qualitative Research: Grounded
+Theory Procedures and Techniques. Newbury Park, CA: Sage Publications, Inc.
+
+A few nits:
+
+\begin{itemize}
+
+\item[p.1] explorative --$>$ exploratory
+
+\item[p.3]: we contacted 100 random candidates - I think you mean they were selected
+randomly. The candidates might bristle at being called random . . .
+
+\item[p.9]: ``one common notion . . . '' I don't think this notion is at all common. I
+think it is quite out of step with what people believe and the kind of work
+that does well in the review process. What is the source of this? I see no
+citations. The sentences that follow sound needlessly defensive to me.
+
+\end{itemize}
+
+\end{review}
+
+
+\end{document}
