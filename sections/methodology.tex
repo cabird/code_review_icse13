@@ -11,8 +11,8 @@ settings, and outline our research method.
 \subsection{Research Questions}
 
 Our investigation of code review revolves around the following research
-questions, which we iteratively refined during our initial in-field
-observations and interviews:
+questions (iteratively refined during our initial in-field
+observations and interviews):
 
 \begin{enumerate}
   \item What are the motivations and expectations for modern code review? Do they change from managers to developers and testers?
@@ -43,9 +43,9 @@ about the incoming task via email.
 
 
 
-Once reviewers open a CodeFlow review, they interact with it via a single
+Once reviewers open a CodeFlow review, they interact with it through a single
 desktop window (\figref{fig:codeflow:screenshot}). On the top left (\textbf{1}), they see the list of files
-changed in the current submission, plus a ``description.txt'' file, which
+changed in the current submission, plus a `description.txt' file, which
 contains a textual explanation of the change, written by the author. On bottom
 left, CodeFlow shows the list of reviewers and their status (\textbf{2}). We see that
 Christian is the review author and Alberto, Tom, and Nachi are the reviewers.
@@ -62,7 +62,7 @@ are persisted so that if they work at different times, the communication
 becomes asynchronous. The bottom right pane (\textbf{5}) shows the summary of all the
 comments in the review. 
 
-CodeFlow centralizes and records all the information on code reviews on a
+CodeFlow records all the information on code reviews on a
 central server. This provides an additional data source that we used to analyze
 real code review comments without incurring the Hawthorne effect~\cite{adair1984hawthorne}.
 
@@ -88,8 +88,8 @@ real code review comments without incurring the Hawthorne effect~\cite{adair1984
    \vspace{-1.5em}
 \end{figure*}
 
-Our research method followed a mixed qualitative and quantitative approach~\cite{creswell2009research}, depicted in
-\figref{fig:research-method}, collecting data from different sources for triangulation: (\textbf{1})
+Our research method followed a mixed qualitative and quantitative approach~\cite{creswell2009research} 
+(depicted in \figref{fig:research-method}), which collects data from different sources for triangulation: (\textbf{1})
 analysis of previous study, (\textbf{2}) observations and interviews with developers,
 (\textbf{3}) card sort on interview data,  (\textbf{4}) card sort on code review comments, (\textbf{5})
 the creation of an affinity diagram, and (\textbf{6}) survey to managers and
@@ -101,8 +101,8 @@ external vendor. The study investigated how different product teams were using
 CodeFlow. It consisted of structured interviews (lasting 30-50 minutes) to 23
 people with different roles.
 
-Most of the interview questions revolved around topics that are very specific
-to tool usage, and were only tangentially related to this work. We found one
+Most of the interview questions revolved around topics that were very specific
+to usage of the tool, and were only tangentially related to this work. We found one
 relevant as a starting point for our study: ``\emph{What do you hope to accomplish
 when you submit a code review?}'' We analyzed the transcript of this answer, for
 each interview, through the process of \emph{coding}~\cite{berg2004qualitative} (also used in
@@ -115,7 +115,7 @@ maintaining team awareness, improving code quality, and assessing the
 high-level design. We used them to draw an initial guideline for our
 interviews.
 
-\textbf{2. Observations and interviews with developers:} Next, we conducted a series of
+\textbf{2. Observations and interviews with developers:} Subsequently, we conducted a series of
 one-to-one meetings with developers who use CodeFlow, each taking 40-60
 minutes. 
 
@@ -139,15 +139,15 @@ Since we, as observers, have backgrounds in software development and practices
 at Microsoft, we could understand most of the work and where and how
 information was obtained without inquiry. 
 
-The second part of the meeting was a \emph{semi-structured} interview~\cite{taylor2010qualitative}. Semi-structured interviews make use of an \emph{interview guide} that
+The second part of the meeting was a \emph{semi-structured} interview~\cite{taylor2010qualitative}. This form of interviews makes use of an \emph{interview guide} that
 contains general groupings of topics and questions rather than a pre-determined
 exact set and order of questions.  They are often used in an exploratory
-context to ``find out what is happening [and] to seek new insights''~\cite{weiss1995learning}. 
+context to \quotation{find out what is happening \emph{[and]} to seek new insights}~\cite{weiss1995learning}. 
 The guideline was iteratively refined after each interview, in
 particular when developers started providing answers very similar to the
 earlier ones, thus reaching a saturation effect.
 
-After the first 5-6 meetings, the observations reached a \emph{saturation} point~\cite{Glas1998a}: They were providing insights very similar to the earlier ones. For this, we adjusted the meetings to have shorter observations, which we used as a starting point for our meetings and as a ``hook'' to talk about topics in our guideline.
+After the first 5-6 meetings, the observations reached a \emph{saturation} point~\cite{Glas1998a}: They were providing insights very similar to the earlier ones. For this, we adjusted the meetings to have shorter observations, which we used as a starting point for our meetings and as a hook to talk about topics in our guideline.
 
 The audio of each interview was then transcribed and broken up into smaller
 coherent units for subsequent analysis.
@@ -172,7 +172,7 @@ card sort has predefined groups and is typically applied when themes are known
 in advance, which was not the case for our study.
 
 The first author of this paper created all of the cards, from the 1,047
-coherent units in the interviews (an example card is shown in~\cite{bacchelli2012appendix}). Throughout our further analysis other
+coherent units in the interviews (an example card is shown in a technical report~\cite{bacchelli2012appendix}). Throughout our further analysis other
 researchers (the second author and external people) were involved in developing
 categories and assigning cards to categories, so as to strengthen the validity
 of the result. The first author played a special role of ensuring that the
@@ -184,7 +184,7 @@ categories.
 
 \textbf{4. Card sort (code review comments):} The same method was applied to group code
 review comments into categories: We randomly sampled 200 threads with at least
-two comments (e.g., Point 4 of \figref{fig:research-method}), from the entire dataset of CodeFlow
+two comments (\eg Point 4 of \figref{fig:research-method}), from the entire dataset of CodeFlow
 reviews, which embeds data from dozens of independent software products at
 Microsoft. We printed one card for each comment (along with the entire
 discussion thread to give the context), totaling 570 cards, and conducted a
@@ -207,7 +207,7 @@ affinity diagram, we followed the five canonical steps: we \begin{inparaenum}[(1
 \textbf{6. Surveys:} The final step of our study was aimed at validating the
 concepts that emerged from the previous phases. Towards this goal, we created
 two surveys to reach a significant number of participants and to challenge our
-conclusions (The full surveys are available as a technical report~\cite{bacchelli2012appendix}). 
+conclusions (the full surveys are available as a technical report~\cite{bacchelli2012appendix}). 
 For the design of the surveys, we followed Kitchenham and
 Pfleeger's guidelines for personal opinion surveys~\cite{kitchenham2008personal}. 
 Both surveys were anonymous to increase response rates~\cite{tyagi1989effects}.
